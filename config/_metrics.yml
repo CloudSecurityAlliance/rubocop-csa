@@ -1,0 +1,14 @@
+##
+# Similarly to migrations, spec blocks will be huge by design.
+#
+Metrics/BlockLength:
+  IgnoredMethods: ['describe', 'context']
+  Exclude:
+    - 'spec/support/webmock_stubs.rb'
+
+# TODO: was live on CCSK, disabling to see if
+# issue is resolved.
+# This file had an issue with this cop:
+# app/controllers/oauths_controller.rb
+# Metrics/BlockNesting:
+#   Enabled: false

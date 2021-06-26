@@ -1,0 +1,13 @@
+##
+# `should` is shorter than `is_expected.to` and visually superior.
+#
+RSpec/ImplicitExpect:
+  EnforcedStyle: should
+
+##
+# RSpec wants "when this" type of formatting, but we group models via context by
+# mechanisms.
+#
+RSpec/ContextWording:
+  Exclude:
+    - 'spec/models/**/*'

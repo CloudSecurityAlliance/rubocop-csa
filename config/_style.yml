@@ -1,0 +1,73 @@
+##
+# ¯\_(ツ)_/¯
+#
+Style/AsciiComments:
+  AllowedChars: ['ツ', '¯']
+
+##
+# This cop suggests changes that are not functionally equivalent, and its value
+# is currently debated within the ruby community.
+#
+# See: https://github.com/bbatsov/ruby-style-guide/issues/556
+#
+Style/ModuleFunction:
+  Enabled: false
+
+##
+# The readability of `[:some, :various, :symbols]` is superior to
+# `%i[some various symbols]`
+#
+Style/SymbolArray:
+  EnforcedStyle: brackets
+
+##
+# Try and make rubocop follow our internal guidelines on hash styling...
+#
+Style/HashSyntax:
+  EnforcedStyle: ruby19_no_mixed_keys
+  UseHashRocketsWithSymbolValues: true
+
+##
+# Favor implicit returns for simple code, but feel free to use explicit return
+# when it helps readability.
+#
+Style/RedundantReturn:
+  Enabled: false
+
+##
+# Official style guide wants %w[some group of words], but we don't care.
+#
+Style/WordArray:
+  Enabled: false
+
+##
+# Only require using "raise" outside of specs
+# ("fail" is preferred in specs)
+#
+Style/SignalException:
+  Exclude:
+    - 'spec/**/*'
+
+##
+# Compact style is more compact, but is not functionally equivalent when the
+# parent module has not yet been defined.
+#
+# e.g. This works:
+#
+#    module CloudSecurityAlliance
+#      class Application < Rails::Application
+#        ...
+#      end
+#    end
+#
+# While this throws "Uninitialized constant CloudSecurityAlliance":
+#
+#    class CloudSecurityAlliance::Application < Rails::Application
+#
+# Which could be corrected (ugily) by changing it to this:
+#
+#    module CloudSecurityAlliance; end
+#    class CloudSecurityAlliance::Application < Rails::Application
+#
+Style/ClassAndModuleChildren:
+  Enabled: false

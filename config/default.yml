@@ -1,0 +1,14 @@
+inherit_from:
+  - _layout.yml
+  - _metrics.yml
+  - _rspec.yml
+  - _style.yml
+
+require:
+  - rubocop-rake
+  - rubocop-performance
+  - rubocop-thread_safety
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.0.0

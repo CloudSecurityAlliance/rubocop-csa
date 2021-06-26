@@ -1,0 +1,55 @@
+##
+# 80 Characters allows codebases to be more easily read in split screen mode,
+# as well as on other sources such as terminal and Github.
+#
+# That said, one-line expectations in RSpec commonly exceed this limit, and the
+# readability is significantly hindered when attempting to break these into
+# multiple lines.
+#
+#
+# CURRENTLY DISABLED
+#
+# LineLength affects other cops and it will take a ton of time to fix all the
+# violations trying to get it to 80. Maybe we try this in the future, but a
+# "best practice" approach seems best for now.
+#
+# Layout/LineLength:
+#   IgnoredPatterns: ['it { should', 'I18n.t']
+#   Max: 80
+
+##
+# Variable assignment can be indented weirdly, so align to the ending statement
+# instead.
+#
+# If we hate this, remove it. (came from Josh's personal settings)
+#
+Layout/CaseIndentation:
+  EnforcedStyle: end
+
+##
+# It can be unclear if a line is truly ended unless the dot is on the method
+# receiver.
+#
+Layout/DotPosition:
+  EnforcedStyle: trailing
+
+##
+# Lines can get stupidly long if we indent it to the other params/args.
+#
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
+Layout/ArgumentAlignment:
+  EnforcedStyle: with_fixed_indentation
+
+##
+# Allow extra spaces when aligning to other operators...
+# (doesn't seem to work all the time though)
+#
+Layout/SpaceAroundOperators:
+  AllowForAlignment: true
+
+##
+# Agreed in office to enforce outdent.
+#
+Layout/AccessModifierIndentation:
+  EnforcedStyle: outdent
