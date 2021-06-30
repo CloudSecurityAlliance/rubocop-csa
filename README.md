@@ -15,6 +15,7 @@ Provides a centralized location for CSA's commonly used RuboCop overrides.
 
 ```ruby
 gem 'rubocop-csa'
+gem 'rubocop-faker'
 gem 'rubocop-rails'
 gem 'rubocop-rspec'
 ```
@@ -33,6 +34,7 @@ inherit_gem:
 
 ```ruby
 gem 'rubocop-csa'
+gem 'rubocop-faker'
 gem 'rubocop-rspec'
 ```
 
