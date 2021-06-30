@@ -12,6 +12,7 @@ Gem::Specification.new do |s|
     'Provides a centralized location for CSA\'s commonly used RuboCop '\
     'overrides.'
 
+  s.license  = 'Apache-2.0'
   s.author   = 'Cloud Security Alliance'
   s.email    = 'support@cloudsecurityalliance.org'
   s.homepage = repo_url
